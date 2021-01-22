@@ -11,6 +11,8 @@
          <!-- Additional CSS must be placed after Bootstrap CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" /> <!--Using Google Fonts: Open Sans and Lobster-->
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/> <!--Access the Font-Awesome file-->
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/> <!--Access to the CSS file for Bootstrap-Social-->
 
         <title>NuCamp: A Better Way To Camp</title>
     </head>
@@ -23,10 +25,10 @@
 
             <div class="collapse navbar-collapse" id="nucampNavbar"> <!--id name is the same as the button's data-target-->
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li> <!--Active shows that you are on the current page-->
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li> <!--"nav-item" and "nav-link" classes change the appearance of the links in the Nucamp navigation bar-->
-                    <li class="nav-item"><a class="nav-link" href="#">Sites</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"> <i class="fa fa-home fa-lg"></i> Home</a></li> <!--Active shows that you are on the current page-->
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"> <i class="fa fa-info fa-lg"></i> About</a></li> <!--"nav-item" and "nav-link" classes change the appearance of the links in the Nucamp navigation bar-->
+                    <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-list fa-lg"></i> Sites</a></li> <!--i element means inline element-->
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"> <i class="fa fa-address-card fa-lg"></i> Contact</a></li> <!--the i class introduces the Font Awesome package-->
                 </ul>
             </div>
         </div>
@@ -86,24 +88,24 @@
                 <div class="col-4 col-sm-2 offest-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="aboutus.html">Home</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="aboutus.html">About</a></li>
-                        <li><a href="aboutus.html">Sites</a></li>
-                        <li><a href="aboutus.html">Contact</a></li>
+                        <li><a href="#">Sites</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="col-6 col-sm-5 text-center"> <!--Text will be centered for all viewport sizes, column will span 5 rows for small viewports and higher-->
                     <h5>Social</h5>
-                    <a href="http://instagram.com/">Instagram</a>
-                    <a href="http://facebook.com/">Facebook</a>
-                    <a href="http://twitter.com/">Twitter</a>
-                    <a href="http://youtube.com/">YouTube</a>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"> <i class="fa fa-instagram"></i> </a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"> <i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"> <i class="fa fa-youtube"></i></a>
                 </div>
 
                 <div class="col-sm-4 text-center"> <!--Text will be in the center for all viewport sizes, column spans for 4 rows for small viewports and higher-->
-                    Tel: 1-206-555-1234 <br/>
-                    Email: campsites@nucamp.co
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone fa-lg text-primary"></i> Tel: 1-206-555-1234 </a><br/>
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope fa-lg text-primary"></i> Email: campsites@nucamp.co </a>
                 </div>
             </div>
         </div>
