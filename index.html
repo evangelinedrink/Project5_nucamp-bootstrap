@@ -48,6 +48,11 @@
                     <h1>NuCamp</h1>
                     <h2>A better way to camp</h2>
                 </div>
+
+                <div class="col-md-4 col-xl-2 mt-4"> <!--The button comes after the Nucamp text, that way it will be to the right of this text.-->
+                    <a type="button" href="#reserveForm" class="btn btn-info btn-lg text-nowrap">Reserve Campsite</a> <!--the href="#reserveForm" is used when the user clicks on the button it will take them directly to the Reserve a Campsite form at the bottom of the page. The id name for the form is "reserveForm"-->
+                </div>
+
             </div>
         </div>
     </header>
@@ -75,8 +80,15 @@
             </div>
 
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>      
+                <div class="media">
+  
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>      
+                    </div>
+
+                    <img class="d-flex img-thumbnail ml-3" src="img/react-lake-thumb.jpg" alt="Lake that is surrounded with trees and a mountain in the background."> <!--To place the image to the right of the text (media-body), make sure the image element goes after the text.  To place the image to the left of the text, you can place the image element before media-body. Classes float-right/float-left doesn't work because of Flexbox in Bootstrap.-->
+                </div>
             </div>
         </div>
 
@@ -95,6 +107,54 @@
                 </div>
             </div>
         </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-6 mx-auto"> <!--mx-auto horizontally centers the column.-->
+                
+                <div class="card">
+                        <h3 class="card-header text-white bg-info">Reserve a Campsite</h3>
+                    <div class="card-body">
+
+                        <form id="reserveForm"> <!--Creation of the form.  The id "reserveForm" is synced with the button in the Jumbotron.  When the user clicks on the button, it will take them directly to the form, thanks to the "reserveForm" id.-->
+                            <div class="form-group"> <!--The form-group class is used to help with the display across different browsers and devices.-->
+                                <div class="row">
+                                    <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label> <!--The class col-form-label is used for styling across different browsers and devices.-->
+                                    <div class="col">
+                                        <select class="custom-select" name="numCampers" id="numCampers"> <!--The class form-control is used to help with the display across different browsers and devices. Classes form-control is used for <input>, <select> and <textarea>.-->
+                                            <option>Select...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-sm-6 col-form-label" for="date">Date</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy"/>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer class="site-footer"> <!--Since we have footer elements in two different places, site-footer helps make this footer the main footer of the webpage.-->
