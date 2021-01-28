@@ -34,9 +34,56 @@
                     <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-list fa-lg"></i> Sites</a></li> <!--i element means inline element-->
                     <li class="nav-item"><a class="nav-link" href="contactus.html"> <i class="fa fa-address-card fa-lg"></i> Contact</a></li> <!--the i class introduces the Font Awesome package-->
                 </ul>
+
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button> <!--To create an x button, use the html entity &times;-->
+                </div>
+
+            <div class="modal-body">
+                <div class="container-fluid"> <!--Creating a Bootstrap Grid.-->
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label class="sr-only" for="loginEmail">Email address</label> <!--sr-only class means it is only visible for screenreading software.-->
+                                <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                            </div>
+
+                            <div class="form-group col-12">
+                                <label class="sr-only" for="loginPassword">Password</label>
+                                <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                            </div>
+
+                            <div class="col"> <!--Creates a "Remember me" checkbox-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row"> <!--Creates a Cancel and Submit buttons.-->
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div> <!--The end div for the "modal-content" class has to go at the very end to incorporate the entire model (creates the white area for the entire modal, not just for the modal's header.)-->
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron jumbotron-fluid"> <!--Gets rid of rounded corners in the header-->
         <div class="container">
