@@ -20,6 +20,27 @@
 
 <body>
 
+    <header class="jumbotron jumbotron-fluid"> <!--Gets rid of rounded corners in the header-->
+        <div class="container">
+            <div class="row row-content">
+
+                <div class="col-4 col-sm-3 col-md-2 align-self-center"> <!--The column will span 4 rows for extra small viewports, it will span 3 rows for small viewports and 2 rows for medium and up viewports.-->
+                    <img src="img/logo.png" class="img-fluid" alt="NuCamp Logo"/>
+                </div>
+
+                <div class="col">
+                    <h1>NuCamp</h1>
+                    <h2>A better way to camp</h2>
+                </div>
+
+                <div class="col-md-4 col-xl-2 mt-4"> <!--The button comes after the Nucamp text, that way it will be to the right of this text.-->
+                    <a role="button" href="#reserveForm" class="btn btn-info btn-lg text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br/><strong>1-206-555-1234</strong>">Reserve Campsite</a> <!--the href="#reserveForm" is used when the user clicks on the button it will take them directly to the Reserve a Campsite form at the bottom of the page. The id name for the form is "reserveForm". Tooltip was added using data-toggle-->
+                </div>
+
+            </div>
+        </div>
+    </header>
+
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!--Creating the Navigation Bar (navbar-dark makes the links lighter when the background is darker. Sticky-top makes sure that Navbar will stay at the top.)-->
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30"/></a>
@@ -85,28 +106,66 @@
         </div>
     </div>
 
-    <header class="jumbotron jumbotron-fluid"> <!--Gets rid of rounded corners in the header-->
-        <div class="container">
-            <div class="row row-content">
-
-                <div class="col-4 col-sm-3 col-md-2 align-self-center"> <!--The column will span 4 rows for extra small viewports, it will span 3 rows for small viewports and 2 rows for medium and up viewports.-->
-                    <img src="img/logo.png" class="img-fluid" alt="NuCamp Logo"/>
-                </div>
-
-                <div class="col">
-                    <h1>NuCamp</h1>
-                    <h2>A better way to camp</h2>
-                </div>
-
-                <div class="col-md-4 col-xl-2 mt-4"> <!--The button comes after the Nucamp text, that way it will be to the right of this text.-->
-                    <a role="button" href="#reserveForm" class="btn btn-info btn-lg text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br/><strong>1-206-555-1234</strong>">Reserve Campsite</a> <!--the href="#reserveForm" is used when the user clicks on the button it will take them directly to the Reserve a Campsite form at the bottom of the page. The id name for the form is "reserveForm". Tooltip was added using data-toggle-->
-                </div>
-
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-md-8 mx-auto"> <!--mx-auto is used for horizontally centering fixed-width block content.-->
             </div>
         </div>
-    </header>
 
-    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-12">
+                <h2 class="text-sm-right">Discover and Review</h2>
+
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators"> <!--Carousel Indicators-->
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1"></li>
+                        <li data-target="#homeCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"> <!--Active class is needed next to the carousel-item class to display the carousel, otherwise the carousel will not show up.-->
+                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground: Campsite with a fire, log benches and trees surrounding the area."/> <!--d-block and w-100 is used to set the image display property to block and the image width to 100%. This prevents the browser's default image alignment from working.-->
+                            
+                            <div class="carousel-caption">
+                                <h3>Breadcrumb Trail Campground</h3>
+                                <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground.</p> <!--d-none and d-sm-block classes will not show this description when the viewport is less than small size.-->
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground: Lake with trees surrounding the lake."/>
+                        
+                            <div class="carousel-caption">
+                                <h3>React Lake Campground</h3>
+                                <p class="d-none d-sm-block">Nested in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground: Fast moving river with a waterfall and moss growing on the rocks."/>
+                        
+                            <div class="carousel-caption">
+                                <h3>Chrome River Campground</h3>
+                                <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--Carousel Controls-->
+                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a> 
+
+                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3"> <!--Column will span 4 columns on small viewports and below, for medium viewports and above it will span 3 columns-->
                 <h2 class="text-sm-right">Discover and Review</h2> <!--Text is positioned to the right for small viewports and higher-->

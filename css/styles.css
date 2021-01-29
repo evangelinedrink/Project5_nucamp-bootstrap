@@ -35,3 +35,11 @@ header h2{
 .navbar{
     background-color: #901CAD;
 }
+
+.carousel-caption{ /*Half-transparent background to the captions in the carousel from the home page.*/
+    background-color: rgba(0,0,0,0.5);
+}
+
+.carousel{ /*Border around the carousel in the home page.*/
+    border: solid #5637DD;
+}
