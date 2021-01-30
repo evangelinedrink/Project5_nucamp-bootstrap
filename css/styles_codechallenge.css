@@ -3,20 +3,30 @@ body{
     background-color: rgb(44, 42, 42);
 }
 
-h1, h2, h3{
+h1{
     font-family: "Lobster", cursive;
+    color: black;
+}
+
+h2, h3{
+    font-family: "Lobster", cursive;
+    color: lightgreen;
+}
+
+p{
+    color: lightgray;
 }
 
 h2{
-    color: #3046C5;
+    color: #30c573;
 }
 
 header h2{
-    color: #CEC8FF;
+    color: #5e5a79;
 }
 
 .site-footer{ /*Styles the main footer in the webpage*/
-    background-image: linear-gradient(#CEC8FF, white);
+    background-image: linear-gradient(#c8ffc8, white);
     padding: 20px 0;
 }
 
@@ -38,9 +48,13 @@ header h2{
 }
 
 .carousel-caption{ /*Half-transparent background to the captions in the carousel from the home page.*/
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba;
+    /*Captions will be below the images*/
+    position: relative; 
+    left: auto;
+    right: auto;
 }
-
+/*background-color: rgba(0,0,0,0.5);*/
 .carousel{ /*Border around the carousel in the home page.*/
     border: solid #37dd61;
 }

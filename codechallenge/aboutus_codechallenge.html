@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"/> <!--Using Google Fonts: Open Sans and Lobster-->
-    <link rel="stylesheet" href="css/styles_codechallenge.css"/>
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/> <!--Access to the CSS file for Bootstrap-Social-->
+    <link rel="stylesheet" href="../css/styles_codechallenge.css"/>
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css"/> <!--Access to the CSS file for Bootstrap-Social-->
 
     <title>NuCamp: A Better Way To Camp</title>
 </head>
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <a href="index.html"><img src="img/logo.png" class="img-fluid"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
+                    <a href="index_codechallenge.html"><img src="../img/logo.png" class="img-fluid"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
                 </div>
 
                 <div class="col">
@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!--Creating the Navigation Bar in the About Us page-->
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
+            <a class="navbar-brand" href="index_codechallenge.html"><img src="../img/logo.png" height="30" width="30"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar"> <!--Create responsive behavior to Navbar by adding a button-->
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,7 +59,7 @@
             <div class="col">
 
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index_codechallenge.html">Home</a></li>
                     <li class="breadcrumb-item active">About</li> <!--Current page is marked with the "active" class.-->
                 </ol>
 
@@ -77,7 +77,7 @@
     
         <div class="col-sm-6">
             <div class="card"> <!--Creating a card element in the web page.-->
-                <h3 class="card-header bg-primary text-white"> Facts At A Glance</h3>
+                <h3 class="card-header bg-success text-white"> Facts At A Glance</h3>
                 
                 <div class="card-body">
                     <dl class="row"> <!--Description list containing the terms <dt> and the term's descriptions <dd>.-->
@@ -97,7 +97,7 @@
         <div class="col">
             <div class="card bg-light mt-3">
                 <blockquote class="blockquote card-body"> <!--Blockquote element provides the setup for a quote.-->
-                    <p class="mb-0"> I will not follow where the path may lead, but I will go where there is no path, and I will leave a trail.</p> <!--mb-0 gets rid of the bottom margin.-->
+                    <p class="mb-0" style="color:black"> I will not follow where the path may lead, but I will go where there is no path, and I will leave a trail.</p> <!--mb-0 gets rid of the bottom margin.-->
                     <footer class="blockquote-footer"> Muriel Strode,
                         <cite title="Source Title"> "Wind-Wafted Wild Flowers"-
                             The Open Court, 1903
@@ -114,7 +114,7 @@
             <h3>Community Partners</h3>    
 
             <div id="accordion">   
-                <div class="card"> <!--Use the card class to create the accordion.-->
+                <div class="card" style="color:black"> <!--Use the card class to create the accordion.-->
                     <div role="tab" class="card-header">   
                         <h4>
                             <a data-toggle="collapse" data-target="#bootstrap"> <!--When using data-target (used to relate the card header with information in the card body), you will always need data-toggle="collapse"-->
@@ -123,7 +123,7 @@
                         </h4> 
                         <div class="collapse show" id="bootstrap" data-parent="#accordion"> <!--The class "collapse show" is used to show content when clicked. Data-parent is needed for accordion-like group management when having collapsible area.-->
                             <div class="card-body">
-                                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p> <!--Use d-none to hide elements. d-sm-block will hide the element for all screen sizes except for small to larger viewports.-->
+                                <p class="d-none d-sm-block" style="color:black">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p> <!--Use d-none to hide elements. d-sm-block will hide the element for all screen sizes except for small to larger viewports.-->
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                         </h4>
                         <div class="collapse" id="git" data-parent="#accordion"> <!--Collapse class is used to hide content until clicked.-->
                             <div class="card-body">
-                                <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                                <p class="d-none d-sm-block" style="color:black">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                         </h4>
                         <div class="collapse" id="mongo" data-parent="#accordion">
                             <div class="card-body">
-                                <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
+                                <p class="d-none d-sm-block" style="color:black">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                         </h4>
                         <div class="collapse" id="node" data-parent="#accordion">
                             <div class="card-body">
-                                <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                                <p class="d-none d-sm-block" style="color:black">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
                             </div>
                         </div>
                     </div>
@@ -185,7 +185,7 @@
             <div class="table-responsive"> <!--Responsive Table that changes when the viewport changes. The table will have a horizontal scroll bar when the viewport is low.-->
                 <table class="table table-striped">
                     <thead>
-                        <tr class="bg-primary text-light">
+                        <tr class="bg-success text-light">
                             <th></th>
                             <th>2016</th>
                             <th>2017</th>
@@ -193,7 +193,7 @@
                         </tr>
                     </thead>
 
-                    <tbody class="table-primary"> <!--table-primary class gives the table's body a blue color.-->
+                    <tbody class="table-success"> <!--table-primary class gives the table's body a blue color.-->
                         <tr>
                             <th>Staff Wilderness Experts</th>
                             <td>10</td>
@@ -227,10 +227,10 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index_codechallenge.html">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Sites</a></li>
-                        <li><a href="contactus.html">Contact</a></li>
+                        <li><a href="contactus_codechallenge.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -252,8 +252,8 @@
 
 
 <!--jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

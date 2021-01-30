@@ -6,13 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
         <!--Bootstrap CSS-->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
         
          <!-- Additional CSS must be placed after Bootstrap CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" /> <!--Using Google Fonts: Open Sans and Lobster-->
-        <link rel="stylesheet" href="css/styles_codechallenge.css" />
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/> <!--Access the Font-Awesome file-->
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/> <!--Access to the CSS file for Bootstrap-Social-->
+        <link rel="stylesheet" href="../css/styles_codechallenge.css" />
+        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css"/> <!--Access the Font-Awesome file-->
+        <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css"/> <!--Access to the CSS file for Bootstrap-Social-->
 
         <title>NuCamp: A Better Way To Camp</title>
     </head>
@@ -25,7 +25,7 @@
             <div class="row row-content">
 
                 <div class="col-4 col-sm-3 col-md-2 align-self-center"> <!--The column will span 4 rows for extra small viewports, it will span 3 rows for small viewports and 2 rows for medium and up viewports.-->
-                    <img src="img/logo.png" class="img-fluid" alt="NuCamp Logo"/>
+                    <img src="../img/logo.png" class="img-fluid" alt="NuCamp Logo"/>
                 </div>
 
                 <div class="col">
@@ -43,7 +43,7 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!--Creating the Navigation Bar (navbar-dark makes the links lighter when the background is darker. Sticky-top makes sure that Navbar will stay at the top.)-->
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30"/></a>
+            <a class="navbar-brand" href="#"><img src="../img/logo.png" height="30" width="30"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar"> <!--Create responsive behavior to Navbar by adding a toggle button (hamburger style button) when the viewport reaches a certain size.-->
                 <span class="navbar-toggler-icon"></span> <!--ml-auto in line 20 makes the toggle bar align to the right instead of the left.-->
             </button>
@@ -97,7 +97,7 @@
 
                         <div class="form-row"> <!--Creates a Cancel and Submit buttons.-->
                             <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            <button type="submit" class="btn btn-success btn-sm ml-1">Sign in</button>
                         </div>
                     </form>
                 </div>
@@ -125,7 +125,7 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active"> <!--Active class is needed next to the carousel-item class to display the carousel, otherwise the carousel will not show up.-->
-                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground: Campsite with a fire, log benches and trees surrounding the area."/> <!--d-block and w-100 is used to set the image display property to block and the image width to 100%. This prevents the browser's default image alignment from working.-->
+                            <img class="d-block w-100" src="../img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground: Campsite with a fire, log benches and trees surrounding the area."/> <!--d-block and w-100 is used to set the image display property to block and the image width to 100%. This prevents the browser's default image alignment from working.-->
                             
                             <div class="carousel-caption">
                                 <h3>Breadcrumb Trail Campground</h3>
@@ -134,7 +134,7 @@
                         </div>
 
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground: Lake with trees surrounding the lake."/>
+                            <img class="d-block w-100" src="../img/react-lake.jpg" alt="React Lake Campground: Lake with trees surrounding the lake."/>
                         
                             <div class="carousel-caption">
                                 <h3>React Lake Campground</h3>
@@ -143,7 +143,7 @@
                         </div>
 
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground: Fast moving river with a waterfall and moss growing on the rocks."/>
+                            <img class="d-block w-100" src="../img/chrome-river.jpg" alt="Chrome River Campground: Fast moving river with a waterfall and moss growing on the rocks."/>
                         
                             <div class="carousel-caption">
                                 <h3>Chrome River Campground</h3>
@@ -173,7 +173,7 @@
 
             <div class="col">
                 <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Campsite that has a fire burning in a pit."/> <!--In the img element, there are Bootstrap classes. The img-thumbnail gives the picture a rounded border, mr-3 adds a margin to the right, d-flex class is used to help the bug with Internet Explorer when using media classes.-->
+                        <img class="d-flex mr-3 img-thumbnail" src="../img/breadcrumb-trail-thumb.jpg" alt="Campsite that has a fire burning in a pit."/> <!--In the img element, there are Bootstrap classes. The img-thumbnail gives the picture a rounded border, mr-3 adds a margin to the right, d-flex class is used to help the bug with Internet Explorer when using media classes.-->
                     <div class="media-body align-self-center">
                         <h3>Our Campsites</h3>
                         <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>       
@@ -195,7 +195,7 @@
                         <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>      
                     </div>
 
-                    <img class="d-flex img-thumbnail ml-3" src="img/react-lake-thumb.jpg" alt="Lake that is surrounded with trees and a mountain in the background."> <!--To place the image to the right of the text (media-body), make sure the image element goes after the text.  To place the image to the left of the text, you can place the image element before media-body. Classes float-right/float-left doesn't work because of Flexbox in Bootstrap.-->
+                    <img class="d-flex img-thumbnail ml-3" src="../img/react-lake-thumb.jpg" alt="Lake that is surrounded with trees and a mountain in the background."> <!--To place the image to the right of the text (media-body), make sure the image element goes after the text.  To place the image to the left of the text, you can place the image element before media-body. Classes float-right/float-left doesn't work because of Flexbox in Bootstrap.-->
                 </div>
             </div>
         </div>
@@ -207,7 +207,7 @@
 
             <div class="col">
                 <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters"/>
+                        <img class="d-flex mr-3 img-thumbnail" src="../img/bootstrap-thumb.png" alt="Bootstrap Outfitters"/>
                     <div class="media-body align-self-center">
                         <h3>Bootstrap Outfitters</h3>
                         <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>   
@@ -220,7 +220,7 @@
             <div class="col-sm-6 mx-auto"> <!--mx-auto horizontally centers the column.-->
                 
                 <div class="card">
-                        <h3 class="card-header text-white bg-info">Reserve a Campsite</h3>
+                        <h3 class="card-header text-white bg-success">Reserve a Campsite</h3>
                     <div class="card-body">
 
                         <form id="reserveForm"> <!--Creation of the form.  The id "reserveForm" is synced with the button in the Jumbotron.  When the user clicks on the button, it will take them directly to the form, thanks to the "reserveForm" id.-->
@@ -253,7 +253,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col">
-                                        <button type="submit" class="btn btn-primary">Search</button>
+                                        <button type="submit" class="btn btn-success">Search</button>
                                     </div>
                                 </div>
                             </div>
@@ -273,9 +273,9 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="aboutus_codechallenge.html">About</a></li>
                         <li><a href="#">Sites</a></li>
-                        <li><a href="contactus.html">Contact</a></li>
+                        <li><a href="contactus_codechallenge.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -288,17 +288,17 @@
                 </div>
 
                 <div class="col-sm-4 text-center"> <!--Text will be in the center for all viewport sizes, column spans for 4 rows for small viewports and higher-->
-                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone fa-lg text-primary"></i> Tel: 1-206-555-1234 </a><br/>
-                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope fa-lg text-primary"></i> Email: campsites@nucamp.co </a>
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone fa-lg text-success"></i> Tel: 1-206-555-1234 </a><br/>
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope fa-lg text-success"></i> Email: campsites@nucamp.co </a>
                 </div>
             </div>
         </div>
     </footer>
 
 <!--jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script>  //The tooltip in the "Reserve Campsite" button needs this JavaScript (in the form of jQuery) to make it work.
     $(function(){  

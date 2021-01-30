@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
     <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles_codechallenge.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/> <!--Access to the CSS file for Bootstrap-Social-->
+    <link rel="stylesheet" href="../css/styles_codechallenge.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css"/> <!--Access to the CSS file for Bootstrap-Social-->
 
     <title>NuCamp: A Better Way To Camp</title>
 </head>
@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <a href="index.html"><img src="img/logo.png" class="img-fluid"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
+                    <a href="index_codechallenge.html"><img src="../img/logo.png" class="img-fluid"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
                 </div>
 
                 <div class="col">
@@ -37,7 +37,7 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
+            <a class="navbar-brand" href="index_codechallenge.html"><img src="../img/logo.png" height="30" width="30"/></a> <!--The information in the anchor element will return the user to the homepage (index.html) when they click the logo image.-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,7 +56,7 @@
         <div class="row">
             <div class="col">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index_codechallenge.html">Home</a></li>
                     <li class="breadcrumb-item active">Contact</li>
                 </ol>
                 <h2>Contact Us</h2>
@@ -66,8 +66,8 @@
 
         <div class="row row-content align-items-center">
             <div class="col-sm-4">
-                <h5>Our Address</h5>
-                <address>
+                <h5 style="color:lightgrey">Our Address</h5>
+                <address style="color:lightgrey">
                     1 Nucamp Way<br />
                     Seattle, WA 98001<br />
                     U.S.A.
@@ -87,7 +87,7 @@
             <div class="col-md-10">
                 <form>
                     <div class="form-group row"> <!--form-group goes to all the parent nodes in the Bootstrap grid.  It makes the styling of the form nice and even.-->
-                        <label for="firstName" class="col-md-2 col-form-label">First Name</label> <!--Label elements can be treated just like div elements, which is why we can place column classes (class="col") directly to them.-->
+                        <label for="firstName" class="col-md-2 col-form-label" style="color:lightgrey">First Name</label> <!--Label elements can be treated just like div elements, which is why we can place column classes (class="col") directly to them.-->
                         
                         <div class="col-md-10"> <!--A div class has to be placed around input void elements because they don't act like div classes.-->
                             <input type="text" class="form-control" if="firstName" name="firstName" placeholder="First Name"/>
@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label> <!--col-form-label makes sure that the labels align vertically with their inputs.-->
+                        <label for="lastName" class="col-md-2 col-form-label" style="color:lightgrey">Last Name</label> <!--col-form-label makes sure that the labels align vertically with their inputs.-->
                         
                         <div class="col-md-10">
                             <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"/>
@@ -103,7 +103,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="areaCode" class="col-md-2 col-form-label">Contact Telephone</label>
+                        <label for="areaCode" class="col-md-2 col-form-label" style="color:lightgrey">Contact Telephone</label>
                         
                         <div class="col-5 col-md-3">
                             <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area Code"/>
@@ -115,7 +115,7 @@
                     </div>
                    
                     <div class="form-group row">
-                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <label for="email" class="col-md-2 col-form-label" style="color:lightgrey">Email</label>
                         
                         <div class="col-md-10">
                             <input type="email" id="email" name="email" placeholder="Email"/>
@@ -128,18 +128,18 @@
                     
                         <div class="form-check form-check-inline"> <!--form-check is used for checkboxes and radio buttons and helps improve their layout and styling. form-check-inline makes sure that the radio buttons are on the same row.-->
                             <input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes"/>
-                            <label for="contactYes" class="form-check-label">Yes</label>
+                            <label for="contactYes" class="form-check-label" style="color:lightgrey">Yes</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                             <input type="radio" class="form-check-input" id="contactNo" name="contactRadios" value="no"/>
-                            <label for="contactNo" class="form-check-label">No</label>
+                            <label for="contactNo" class="form-check-label" style="color:lightgrey">No</label>
                         </div>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                        <label for="feedback" class="col-md-2 col-form-label" style="color:lightgrey">Your Feedback</label>
                         
                         <div class="col-md-10">
                             <textarea id="feedback" class="form-control" name="feedback" rows="8"></textarea>
@@ -148,7 +148,7 @@
 
                     <div class="form-group row">
                         <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary">Send Feedback</button> <!--the class attributes (btn btn-primary) uses Bootstraps to style the button and btn-primary gives the button a blue color.-->
+                            <button type="submit" class="btn btn-success">Send Feedback</button> <!--the class attributes (btn btn-primary) uses Bootstraps to style the button and btn-primary gives the button a blue color.-->
                         </div>
                     </div>
                 </form>
@@ -163,8 +163,8 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="index_codechallenge.html">Home</a></li>
+                        <li><a href="aboutus_codechallenge.html">About</a></li>
                         <li><a href="#">Sites</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -185,9 +185,9 @@
     </footer>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 

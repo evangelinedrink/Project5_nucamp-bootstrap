@@ -33,17 +33,85 @@
                     <h2>A better way to camp</h2>
                 </div>
 
-                <div class="col-md-4 col-xl-2 mt-4"> <!--The button comes after the Nucamp text, that way it will be to the right of this text.-->
-                    <a role="button" href="#reserveForm" class="btn btn-info btn-lg text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br/><strong>1-206-555-1234</strong>">Reserve Campsite</a> <!--the href="#reserveForm" is used when the user clicks on the button it will take them directly to the Reserve a Campsite form at the bottom of the page. The id name for the form is "reserveForm". Tooltip was added using data-toggle-->
+                <!--Creates a Modal for the "Reserve Campsite" button-->
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <button type="button" data-toggle="modal" class="btn btn-info btn-lg text-nowrap" data-target="#reserveModal">Reserve Campsite</button>
                 </div>
 
             </div>
         </div>
     </header>
 
+    <div class="container">
+    <div class="modal" tabindex="-1" role="dialog" id="reserveModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Reserve a Campsite</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!--Creates the x icon on top of the modal to leave the modal.-->
+                        <span aria-hidden="true">&times;</span> 
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group"> <!--The form-group class is used to help with the display across different browsers and devices.-->
+                        <div class="row">
+                            <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label> <!--The class col-form-label is used for styling across different browsers and devices.-->
+                            <div class="col">
+                                <select class="custom-select" name="numCampers" id="numCampers"> <!--The class form-control is used to help with the display across different browsers and devices. Classes form-control is used for <input>, <select> and <textarea>.-->
+                                    <option>Select...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-sm-6 col-form-label" for="date">Date</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy"/>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Campsite Type</label> 
+                            <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active"> <!--Tent Button-->
+                                    <input type="radio" name="siteType" id="siteTent" value="tent"> Tent
+                                </label>
+
+                                <label class="btn btn-primary"> <!--RV Button-->
+                                    <input type="radio" name="siteType" id="siteRV" value="RV"> RV
+                                </label>
+                            </div>
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Search</button> <!--Search button-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!--Creating the Navigation Bar (navbar-dark makes the links lighter when the background is darker. Sticky-top makes sure that Navbar will stay at the top.)-->
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30"/></a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" alt="Nucamp Logo"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar"> <!--Create responsive behavior to Navbar by adding a toggle button (hamburger style button) when the viewport reaches a certain size.-->
                 <span class="navbar-toggler-icon"></span> <!--ml-auto in line 20 makes the toggle bar align to the right instead of the left.-->
             </button>
@@ -215,54 +283,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="row row-content align-items-center">
-            <div class="col-sm-6 mx-auto"> <!--mx-auto horizontally centers the column.-->
-                
-                <div class="card">
-                        <h3 class="card-header text-white bg-info">Reserve a Campsite</h3>
-                    <div class="card-body">
-
-                        <form id="reserveForm"> <!--Creation of the form.  The id "reserveForm" is synced with the button in the Jumbotron.  When the user clicks on the button, it will take them directly to the form, thanks to the "reserveForm" id.-->
-                            <div class="form-group"> <!--The form-group class is used to help with the display across different browsers and devices.-->
-                                <div class="row">
-                                    <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label> <!--The class col-form-label is used for styling across different browsers and devices.-->
-                                    <div class="col">
-                                        <select class="custom-select" name="numCampers" id="numCampers"> <!--The class form-control is used to help with the display across different browsers and devices. Classes form-control is used for <input>, <select> and <textarea>.-->
-                                            <option>Select...</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="row">
-                                    <label class="col-sm-6 col-form-label" for="date">Date</label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy"/>
-                                        </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col">
-                                        <button type="submit" class="btn btn-primary">Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <footer class="site-footer"> <!--Since we have footer elements in two different places, site-footer helps make this footer the main footer of the webpage.-->
@@ -300,11 +320,6 @@
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<script>  //The tooltip in the "Reserve Campsite" button needs this JavaScript (in the form of jQuery) to make it work.
-    $(function(){  
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
 
 </body>
 </html>
