@@ -230,6 +230,16 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+
+                    <div class="btn-group" id="carouselButton"> <!--Creates the pause button on the carousel-->
+                        <button class="btn btn-danger btn-sm" id="carouselPause"> <!--The id, "carouselPause" is used with the jQuery code before the end of the body tag.-->
+                            <i class="fa fa-pause"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm" id="carouselPlay"> <!--Creates the play button on the carousel. The id, "carouselPlay" is used with the jQuery code before the end of the body tag.-->
+                            <i class="fa fa-play"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,5 +331,17 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
+<script>
+    $(function() { //$(function(){...}); is shorthand for the jQuery ready method (or ready function). This function is written as $(document).ready(function(){...});
+        $(".carousel").carousel({interval:2000}); //Set the carousel image cycle interval to 2000 ms instead of 5000 ms.
+        $("#carouselPause").click(function(){ //Implement pause function for the carousel.
+            $(".carousel").carousel("pause");
+        });
+
+        $("#carouselPlay").click(function() { //Implements the play function for the carousel.
+            $(".carousel").carousel("cycle");
+            });
+    });
+</script>
 </body>
 </html>
