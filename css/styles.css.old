@@ -1,0 +1,52 @@
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h5{
+    font-family: "Lobster", cursive;
+}
+
+h2{
+    color: #3046C5;
+}
+
+header h2{
+    color: #CEC8FF;
+}
+
+.site-footer{ /*Styles the main footer in the webpage*/
+    background-image: linear-gradient(#CEC8FF, white);
+    padding: 20px 0;
+}
+
+.jumbotron{
+    margin: 0; /*Remove the space between the Jumbotron and the NavBar*/
+    padding: 30px; /*30px on all four sides*/
+    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+    color: white;
+}
+
+.row-content{
+    padding: 50px 0; /*50px on the top and the bottom and 0px for the left and the right*/
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar{
+    background-color: #901CAD;
+}
+
+.carousel-caption{ /*Half-transparent background to the captions in the carousel from the home page.*/
+    background-color: rgba(0,0,0,0.5);
+}
+
+.carousel{ /*Border around the carousel in the home page.*/
+    border: solid #5637DD;
+}
+
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
