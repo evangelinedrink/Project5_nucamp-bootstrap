@@ -12,3 +12,17 @@ $("#carouselButton").click(function(){ //Implement the function that will displa
     }
 });
 });
+
+//When Login button is clicked, the login modal will appear.
+$(function(){
+    $("#loginButton").click(function(){
+        $("#loginModal").modal("show");
+    });
+});
+
+//When Reserve Campsite button is clicked, the reservation modal will appear.
+$(function() {
+    $("#reserveButton").click(function(){
+        $("#reserveModal").modal("show");
+    });
+});
